@@ -1,0 +1,58 @@
+.main{
+    position: relative;
+ 
+  }
+
+  .cardContainer{
+    height: 136vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+ 
+    top: 0px;
+    .card{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: -20%;
+      gap: 2em;
+ 
+      width: 1200px;
+      border: 1px solid #888888;
+      border-radius: 25px;
+      padding:50px;
+      transform-origin: top;
+      h2{
+     
+        margin: 0px;
+    ;
+      }
+      .body{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    
+    
+  
+        .description{
+          width: 40%;
+          position: relative;
+          top: 10%;
+           
+          span{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            a{
+              font-size: 12px;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+  
+         
+      }
+    }
+  }
