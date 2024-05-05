@@ -6,32 +6,32 @@ const dummyItems = [
   {
     quote:
       "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "sanddep ",
+    name: "Alex Bennett ",
     title: "scammer",
   },
   {
     quote:
       "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "sanddep ",
-    title: "scammer",
+    name: "Alex Bennett ",
+    title: "CEO, LeeTech Solutions    ",
   },
   {
     quote:
       "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "sanddep ",
-    title: "scammer",
+    name: "Alex Bennett ",
+    title: "CEO, LeeTech Solutions    ",
   },
   {
     quote:
       "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "sanddep ",
-    title: "scammer",
+    name: "Alex Bennett ",
+    title: "CEO, LeeTech Solutions",
   },
   {
     quote:
       "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "sanddep ",
-    title: "scammer",
+    name: "Alex Bennett ",
+    title: "CEO, LeeTech Solutions    ",
   },
 ];
 

@@ -5,6 +5,7 @@ import Aboutus from "./aboutus/about";
 import Features from "./features/features";
 import HostSection from "./Host";
 import Testinomial from "./testimonal/testinomial";
+import Subscribe from "./subscibe/subscribe";
 
 function HomePage() {
   return (
@@ -15,6 +16,7 @@ function HomePage() {
       <Features />
       <HostSection />
       <Testinomial />
+      <Subscribe />
     </>
   );
 }
