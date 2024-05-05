@@ -39,7 +39,7 @@ function Testinomial() {
   return (
     <div>
       <div
-        className={`${montserrat.className} w-[60%] px-12 flex gap-5 flex-col mt-36`}
+        className={`${montserrat.className} md:w-[60%] md:px-12 flex gap-5 flex-col mt-36 px-6`}
       >
         <p className="text-sm text-[#00ffff]">TESTIMONIALS</p>
         <h2 className="text-5xl font-medium">

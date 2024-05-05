@@ -11,7 +11,9 @@ export const opensans = Open_Sans({
 });
 function Aboutus() {
   return (
-    <div className={`flex mt-52 ${montserrat.className} gap-12 px-12`}>
+    <div
+      className={`flex mt-52 ${montserrat.className} gap-12 md:px-12 lg:flex-row flex-col px-4`}
+    >
       <div>
         <p className="font-normal text-base text-[#00ffff] mb-4">About us</p>
         <h1 className="text-5xl font-light">
@@ -19,22 +21,24 @@ function Aboutus() {
           voices
         </h1>
       </div>
-      <div className={`${opensans.className} flex flex-col gap-6 w-3/4`}>
+      <div
+        className={`${opensans.className} flex flex-col gap-6 md:w-3/4 w-full`}
+      >
         <p className="font-normal text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           varius enim in eros elementum tristique. Duis cursus, mi quis viverra
           ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
         </p>
         <div className="flex flex-col gap-3">
-          <div className="flex">
+          <div className="flex lg:gap-0 gap-4">
             <BiCheck color="#02e2e2" size={28} />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>
-          <div className="flex">
+          <div className="flex  lg:gap-0 gap-4">
             <BiCheck color="#02e2e2" size={28} />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>
-          <div className="flex">
+          <div className="flex  lg:gap-0 gap-4">
             <BiCheck color="#02e2e2" size={28} />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>
@@ -42,7 +46,7 @@ function Aboutus() {
 
         <button
           type="button"
-          className="px-8 py-3 rounded-full bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200 w-[30%]"
+          className="px-8 py-3 rounded-full bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200 md:w-[40%] w-9/12"
         >
           Learn More
         </button>

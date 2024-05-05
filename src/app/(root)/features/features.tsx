@@ -26,9 +26,9 @@ function Features() {
   return (
     <div>
       <div
-        className={`${montserrat.className} flex justify-center mt-60 mb-12`}
+        className={`${montserrat.className} flex justify-center lg:mt-60  mx-32`}
       >
-        <div className="w-1/2 text-center grid gap-5">
+        <div className="md:w-1/2 text-center grid gap-5 w-full">
           <h1 className="font-normal text-[#00ffff] text-sm">FEATURED</h1>
           <p className="text-5xl font-light">
             <span className="font-medium">In the spotlight: </span> Our most
@@ -44,14 +44,14 @@ function Features() {
           const targetScale = 1 - (projects.length - i) * 0.05;
           return (
             <Card
-              flexDirection={
-                project.flexDirection as
-                  | "row"
-                  | "row-reverse"
-                  | "column"
-                  | "column-reverse"
-                  | undefined
-              }
+              // flexDirection={
+              //   project.flexDirection as
+              //     | "row"
+              //     | "row-reverse"
+              //     | "column"
+              //     | "column-reverse"
+              //     | undefined
+              // }
               key={`p_${i}`}
               i={i}
               EPISODE={project.EPISODE}

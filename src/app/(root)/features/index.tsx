@@ -42,7 +42,6 @@ const Card: React.FC<CardProps> = ({
     offset: ["start end", "start start"],
   });
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
@@ -53,14 +52,16 @@ const Card: React.FC<CardProps> = ({
       <motion.div
         style={{
           backgroundColor: "#111111",
-          flexDirection,
+
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className={styles.card}
+        className="flex relative lg:top-[-20%] lg:gap-9 w-[1200px] border border-solid border-[#888888] rounded-3xl p-12  lg:flex-row flex-col-reverse origin-top	 "
         id="card-container"
       >
-        <div className={"flex gap-4 flex-col w-1/2 top-16 relative h-full"}>
+        <div
+          className={"flex lg:gap-4 flex-col lg:w-1/2 top-16 relative h-full"}
+        >
           <h2 className="text-sm ">{EPISODE}</h2>
           <p className="text-4xl text-[#00ffff]">{title}</p>
           <div className={styles.description}>
@@ -77,7 +78,7 @@ const Card: React.FC<CardProps> = ({
 
           <button
             type="button"
-            className="px-8 py-3 rounded-full bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200  w-[40%]"
+            className="px-8 py-3 rounded-full bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200  lg:w-[40%] w-10/12"
           >
             Play Episode
           </button>

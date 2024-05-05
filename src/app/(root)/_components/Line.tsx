@@ -124,7 +124,7 @@ export default function Line() {
           ></path>
         </svg>
       </div>
-      <div className="flex gap-96 mt-12">
+      <div className="flex gap-12 mt-12 sm:flex-row flex-col lg:gap-96">
         <div className="flex flex-col gap-8">
           <img
             src="https://assets-global.website-files.com/64d34f2a6cc55497367eda5e/64d650ff27f1ba5ba5e5741b_Group%201.svg"
@@ -137,7 +137,7 @@ export default function Line() {
             <LiaLinkedin size={23} />
           </div>
         </div>
-        <div className="flex gap-12">
+        <div className="flex gap-12 sm:flex-row flex-col">
           <ul className="font-medium flex flex-col gap-3  ">
             Main Pages
             {footerSection[0].Mainpages.map((list, index) => (

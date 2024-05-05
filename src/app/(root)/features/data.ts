@@ -16,7 +16,7 @@ export  const projects = [
     src: "/64df5b9207e6565f76538a08_1.png",
     name: 'With Lauren Reynolds',
     profession: 'CFO, Apex Financial Group',
-    banner: '64dccec12e665228623a4684_Tile-01-min.jpg',
+    banner: '64dccefa817cc24af656f468_Tile-06-min.jpg',
     flexDirection: 'row-reverse'
 },
 {
@@ -26,7 +26,7 @@ export  const projects = [
     src: "/64df5b9207e6565f76538a08_1.png",
     name: 'With Lauren Reynolds',
     profession: 'CFO, Apex Financial Group',
-    banner: '64dccec12e665228623a4684_Tile-01-min.jpg',
+    banner: '64dccf576eeab31cf479fbb7_Tile-15-min.jpg',
     flexDirection: 'row'
 },
 {
@@ -36,7 +36,7 @@ export  const projects = [
     src: "/64df5b9207e6565f76538a08_1.png",
     name: 'With Lauren Reynolds',
     profession: 'CFO, Apex Financial Group',
-    banner: '64dccec12e665228623a4684_Tile-01-min.jpg',
+    banner: '64dccf661b62dc3a963337cc_Tile-07-min.jpg',
     flexDirection: 'row-reverse'
 },
 {
