@@ -1,15 +1,55 @@
-import React from "react";
-import { montserrat, opensans } from "../aboutus/about";
+"use client";
+import React, { useRef } from "react";
+import { montserrat } from "../_components/fonts";
+import { Open_Sans } from "next/font/google";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+});
 
 function Subscribe() {
+  const SubscribeContainer = useRef<HTMLDivElement | null>(null);
+  const Tl = gsap.timeline({ paused: true });
+
+  useGSAP(() => {
+    const SubsContainer =
+      SubscribeContainer.current?.querySelector("#subs-container");
+
+    if (SubsContainer) {
+      Tl.from(
+        SubsContainer,
+        { opacity: 0, duration: 1.5, ease: "power3.out", y: "10vw" },
+        0
+      );
+    }
+
+    const trigger = ScrollTrigger.create({
+      trigger: SubscribeContainer.current,
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play none none reverse",
+      onEnter: () => Tl.play(),
+    });
+
+    return () => {
+      trigger.kill();
+    };
+  }, []);
   return (
-    <div className="sm:px-12 rounded-3xl px-4 mt-12 lg:mt-0 sm:mt-6 ">
+    <div
+      className="sm:px-12 rounded-3xl px-4 mt-12 lg:mt-0 sm:mt-6 "
+      ref={SubscribeContainer}
+    >
       <div
+        id="subs-container"
         className={`sm:px-12 px-2 py-20 flex ${montserrat.className} lg:flex-row flex-col rounded-3xl mt-48 bg-[rgba(255,255,255,.05)]  bg-[url(https://assets-global.website-files.com/64d34f2a6cc55497367eda5e/64dcf128eb48dafb565f6e46_BlueStroke%402x-1.webp)]`}
       >
         <div className="md:w-1/2 w-full">
           <h3 className="text-4xl">Latest episodes direct to your inbox</h3>
-          <p className={`${opensans.className} text-lg`}>
+          <p className={`${openSans.className} text-lg`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>

@@ -4,13 +4,12 @@ import React, { useEffect, useRef } from "react";
 import { HeroSection } from "@/lib/constant";
 import { montserrat } from "../navbar/navbar";
 import { Open_Sans } from "next/font/google";
-import Button from "../_components/Button";
+
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const openSans = Open_Sans({
-  weight: "400",
   subsets: ["latin"],
 });
 
@@ -48,9 +47,7 @@ function Hero() {
           It’s time to
           <span className={` ${montserrat.className}`}> talk business.</span>
         </h1>
-        <p className={`${openSans.className} md:w-2/3 para`}>
-          {HeroSection.para}
-        </p>
+        <p className={`  md:w-2/3 para`}>{HeroSection.para}</p>
         <div className="flex sm:flex-row gap-4 flex-col btn">
           <button
             type="button"

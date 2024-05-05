@@ -7,6 +7,9 @@ import { useScroll } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import { projects } from "./data";
 import Card from "./index";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 function Features() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -23,10 +26,52 @@ function Features() {
 
     requestAnimationFrame(raf);
   });
+  const FeatureComponent = useRef<HTMLDivElement | null>(null);
+  const FeatureTl = gsap.timeline({ paused: true });
+  useGSAP(() => {
+    const TitleComponent =
+      FeatureComponent.current?.querySelector("#Feature-component");
+    const CardComponent =
+      FeatureComponent.current?.querySelector("#card-component");
+
+    if (TitleComponent && CardComponent) {
+      FeatureTl.from(
+        TitleComponent,
+        {
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.inOut",
+          y: "10vh",
+        },
+        0
+      ).from(
+        CardComponent,
+        {
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.inOut",
+          y: "10vh",
+        },
+        0
+      );
+    }
+    const trigger = ScrollTrigger.create({
+      trigger: FeatureComponent.current,
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play none none reverse",
+      onEnter: () => FeatureTl.play(),
+    });
+
+    return () => {
+      trigger.kill();
+    };
+  });
   return (
-    <div>
+    <div ref={FeatureComponent}>
       <div
-        className={`${montserrat.className} flex justify-center lg:mt-60  mx-32`}
+        className={`${montserrat.className} flex justify-center lg:mt-60  md:mx-32`}
+        id="Feature-component"
       >
         <div className="md:w-1/2 text-center grid gap-5 w-full">
           <h1 className="font-normal text-[#00ffff] text-sm">FEATURED</h1>
@@ -39,7 +84,7 @@ function Features() {
           </p>
         </div>
       </div>
-      <div ref={container} className={styles.main}>
+      <div ref={container} className={styles.main} id="card-component">
         {projects.map((project, i: number) => {
           const targetScale = 1 - (projects.length - i) * 0.05;
           return (
