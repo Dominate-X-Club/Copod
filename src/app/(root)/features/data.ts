@@ -7,7 +7,7 @@ export  const projects = [
       name: 'With Lauren Reynolds',
       profession: 'CFO, Apex Financial Group',
       banner: '64dccec12e665228623a4684_Tile-01-min.jpg',
-      flexdirection: 'row'
+      flexDirection: 'row'
   },
   {
     EPISODE: " Episode 56",
@@ -17,7 +17,7 @@ export  const projects = [
     name: 'With Lauren Reynolds',
     profession: 'CFO, Apex Financial Group',
     banner: '64dccec12e665228623a4684_Tile-01-min.jpg',
-    flexdirection: 'row'
+    flexDirection: 'row-reverse'
 },
 {
     EPISODE: " Episode 56",
@@ -27,7 +27,7 @@ export  const projects = [
     name: 'With Lauren Reynolds',
     profession: 'CFO, Apex Financial Group',
     banner: '64dccec12e665228623a4684_Tile-01-min.jpg',
-    flexdirection: 'row'
+    flexDirection: 'row'
 },
 {
     EPISODE: " Episode 56",
@@ -37,7 +37,7 @@ export  const projects = [
     name: 'With Lauren Reynolds',
     profession: 'CFO, Apex Financial Group',
     banner: '64dccec12e665228623a4684_Tile-01-min.jpg',
-    flexdirection: 'row'
+    flexDirection: 'row-reverse'
 },
 {
     EPISODE: " Episode 56",
@@ -47,7 +47,7 @@ export  const projects = [
     name: 'With Lauren Reynolds',
     profession: 'CFO, Apex Financial Group',
     banner: '64dccec12e665228623a4684_Tile-01-min.jpg',
-    flexdirection: 'row'
+    flexDirection: 'row'
 },
 ];
 

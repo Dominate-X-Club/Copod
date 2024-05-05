@@ -23,6 +23,7 @@ body {
 
 #card-container:hover #music-img {
   opacity: 0.5;
+  flex-direction: row-reverse;
 }
 
 #music-img{

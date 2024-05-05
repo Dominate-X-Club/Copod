@@ -12,7 +12,7 @@ function Card() {
     <>
       <div
         className={`bg-[#1D1D1D] rounded-2xl gap-4  ${montserrat.className} flex p-6 w-4/5 relative cursor-pointer `}
-        id="card-container "
+        id="card-container"
       >
         <div>
           <img
@@ -23,7 +23,7 @@ function Card() {
           />
 
           <FaCirclePlay
-            className="absolute top-[6.5rem] left-[6.5rem] hidden "
+            className="absolute top-[6.5rem] left-[6.5rem] hidden"
             id="play"
             size={43}
           />

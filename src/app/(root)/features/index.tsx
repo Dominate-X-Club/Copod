@@ -4,6 +4,7 @@ import styles from "./page.module.scss";
 import { useTransform, motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import { montserrat, opensans } from "../aboutus/about";
+import { FaCirclePlay } from "react-icons/fa6";
 
 interface CardProps {
   EPISODE: string;
@@ -15,7 +16,7 @@ interface CardProps {
   banner: string;
   progress: any;
   range: any;
-  flexdirection: string;
+  flexDirection?: "row" | "row-reverse" | "column" | "column-reverse";
   targetScale: number;
   i: number;
   url?: string;
@@ -28,7 +29,7 @@ const Card: React.FC<CardProps> = ({
   name,
   profession,
   banner,
-  flexdirection,
+  flexDirection,
   progress,
   range,
   src,
@@ -52,10 +53,12 @@ const Card: React.FC<CardProps> = ({
       <motion.div
         style={{
           backgroundColor: "#111111",
+          flexDirection,
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
         className={styles.card}
+        id="card-container"
       >
         <div className={"flex gap-4 flex-col w-1/2 top-16 relative h-full"}>
           <h2 className="text-sm ">{EPISODE}</h2>
@@ -79,12 +82,19 @@ const Card: React.FC<CardProps> = ({
             Play Episode
           </button>
         </div>
-        <div>
+        <div className="relative">
           <motion.div>
             <img
               src={`/${banner}`}
               alt="image"
               className="h-full w-full rounded-xl"
+              id="music-img"
+            />
+
+            <FaCirclePlay
+              size={55}
+              id="play"
+              className="absolute top-52 left-52 hidden "
             />
           </motion.div>
         </div>

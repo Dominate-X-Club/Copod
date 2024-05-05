@@ -44,9 +44,23 @@ function Features() {
           const targetScale = 1 - (projects.length - i) * 0.05;
           return (
             <Card
+              flexDirection={
+                project.flexDirection as
+                  | "row"
+                  | "row-reverse"
+                  | "column"
+                  | "column-reverse"
+                  | undefined
+              }
               key={`p_${i}`}
               i={i}
-              {...project}
+              EPISODE={project.EPISODE}
+              title={project.title}
+              description={project.description}
+              src={project.src}
+              name={project.name}
+              profession={project.profession}
+              banner={project.banner}
               progress={scrollYProgress}
               range={[i * 0.25, 1]}
               targetScale={targetScale}
