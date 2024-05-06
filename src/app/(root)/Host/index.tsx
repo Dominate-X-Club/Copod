@@ -38,7 +38,7 @@ function HostSection() {
   });
   return (
     <div ref={HostContainer}>
-      <div className="px-8 lg:mt-32 relative mt-40 " id="host-container">
+      <div className="px-8 md:mt-64 relative mt-40 " id="host-container">
         <img
           src={"/host.webp"}
           alt="hostimage"

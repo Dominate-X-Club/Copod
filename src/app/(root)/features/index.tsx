@@ -54,9 +54,8 @@ const Card: React.FC<CardProps> = ({
           backgroundColor: "#111111",
 
           scale,
-          top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className="flex relative lg:top-[-20%] lg:gap-9 w-[1200px] border border-solid border-[#888888] rounded-3xl p-12  lg:flex-row flex-col-reverse origin-top	 "
+        className="flex relative lg:top-[-20%] lg:gap-9 w-[1200px] border border-solid border-[#888888] rounded-3xl p-12  lg:flex-row flex-col-reverse origin-top	mb-20` "
         id="card-container"
       >
         <div
@@ -68,7 +67,7 @@ const Card: React.FC<CardProps> = ({
             <p className="text-base font-medium">{description}</p>
           </div>
 
-          <div className="flex gap-4  ">
+          <div className="flex gap-4 mb-6 sm:mb-0 ">
             <img src={"64df5b9207e6565f76538a08_1.png"} alt="image" />
             <div className={`${opensans.className}`}>
               <p className="text-sm text-[#00ffff]"> {name}</p>
@@ -78,7 +77,7 @@ const Card: React.FC<CardProps> = ({
 
           <button
             type="button"
-            className="px-8 py-3 rounded-full bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200  lg:w-[40%] w-10/12"
+            className="px-8 py-3 rounded-full bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200  lg:w-[40%] w-10/12 mb-6 lg::mb-0"
           >
             Play Episode
           </button>

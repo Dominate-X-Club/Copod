@@ -164,14 +164,12 @@ export default function Line() {
           <div className="flex flex-col gap-5">
             Listen on
             {footerSection[0].Listen[0].url.map((url, index) => (
-              <>
-                <div className="flex  gap-7 font-medium">
-                  <ul className="flex text-sm gap-3" key={index}>
-                    <img src={url} alt="a" />
-                    <li>{footerSection[0].Listen[0].musicapp[index]}</li>
-                  </ul>
-                </div>
-              </>
+              <div key={index} className="flex  gap-7 font-medium">
+                <ul className="flex text-sm gap-3">
+                  <img src={url} alt="a" />
+                  <li>{footerSection[0].Listen[0].musicapp[index]}</li>
+                </ul>
+              </div>
             ))}
           </div>
         </div>

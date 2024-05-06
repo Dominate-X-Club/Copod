@@ -70,7 +70,7 @@ function Features() {
   return (
     <div ref={FeatureComponent}>
       <div
-        className={`${montserrat.className} flex justify-center lg:mt-60  md:mx-32`}
+        className={`${montserrat.className} flex justify-center lg:mt-60   my-32  `}
         id="Feature-component"
       >
         <div className="md:w-1/2 text-center grid gap-5 w-full">
