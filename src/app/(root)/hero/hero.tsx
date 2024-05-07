@@ -47,7 +47,8 @@ function Hero() {
           It’s time to
           <span className={` ${montserrat.className}`}> talk business.</span>
         </h1>
-        <p className={`  md:w-2/3 para`}>{HeroSection.para}</p>
+        <p className={`  md:w-2/3 para`}>{HeroSection[0].para}</p>
+
         <div className="flex sm:flex-row gap-4 flex-col btn">
           <button
             type="button"
