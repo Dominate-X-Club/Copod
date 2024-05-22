@@ -12,15 +12,16 @@ const config = {
   theme: {
     extend: {
       colors: {
-        bg: '#FEF2E8',
-        main: '#FFDC58',
+        bg: 'black',
+        main: 'white',
         mainAccent: '#ffc800',
       },
       borderRadius: {
         base: '0px'
       },
       boxShadow: {
-        base: '4px 4px 0px 0px rgba(0,0,0,1)',
+        base: '4px 4px 0px 0px rgba(256,256,256,1)',
+        'base-black': '4px 4px 0 rgba(0,0,0,1)',
       },
       translate: {
         boxShadowX: '4px',
