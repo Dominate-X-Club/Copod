@@ -9,7 +9,7 @@ export default function WaitingForm() {
         <Card className="w-svw mx-20">
             <CardHeader>
                 <CardTitle className="text-4xl">Shoot your Podcast</CardTitle>
-                <CardDescription className="text-xl">with <b>copod</b> anyone can record a Podcast.<br/>Just invite your guests, and start talking.<br/>It's that easy!</CardDescription>
+                <CardDescription className="text-xl">with <b>copod</b> anyone can record a Podcast.<br/>Just invite your guests, and start talking.<br/>It&apos;s that easy!</CardDescription>
             </CardHeader>
             <CardContent>
                 <form>
