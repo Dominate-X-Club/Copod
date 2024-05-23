@@ -39,7 +39,7 @@ export default function AuthForm() {
             </div>
           </CardContent>
           <CardFooter className="flex justify-between">
-            <Button variant="outline" formAction={signup}>
+            <Button variant="default" formAction={signup}>
               Sign Up
             </Button>
             <Button formAction={login}>Login</Button>

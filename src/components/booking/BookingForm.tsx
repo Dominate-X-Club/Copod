@@ -1,10 +1,12 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import DatePickerDemo from "../ui/date-picker";
 
-export default function WaitingForm() {
+export default function BookingForm() {
     return (
         <Card className="w-svw mx-20">
             <CardHeader>
@@ -22,8 +24,8 @@ export default function WaitingForm() {
                     <Label>City</Label>
                     <Input placeholder="Delhi 🇮🇳" className=""></Input>
 
-<Label>Recording Date</Label> <br/>
-                    <DatePickerDemo className="w-full"></DatePickerDemo>
+                    <Label>Recording Date</Label> <br/>
+                    <DatePickerDemo></DatePickerDemo>
                 </form>
             </CardContent>
             <CardFooter className="flex justify-between">

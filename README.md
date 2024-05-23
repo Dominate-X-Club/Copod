@@ -32,9 +32,13 @@ we also adhere to the [conventional commits](https://www.conventionalcommits.org
 - `Fork` the project
 - Create a new project in Netlify
 - Click `Deploy` > `using github` > Choose github repo
-- Create these 2 Environment Variables
+- Create these Environment Variables
 ```
 NEXT_PUBLIC_SUPABASE_URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY
+DEPLOYMENT_URL
 ```
+
 > Create a supabase project with `postgres db` if not already, then find its `URL` and `ANON Key` on [supabase.com](supabase.com)
+
+> Deployment URL is used fill the meta data json

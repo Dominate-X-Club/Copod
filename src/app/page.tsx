@@ -2,7 +2,7 @@
 
 import HeroFirst from "@/components/hero-section/hero-first";
 import NavBar from "@/components/nav/nav-bar";
-import WaitingForm from "@/components/waitinglist/WaitingForm";
+import BookingForm from "@/components/booking/BookingForm";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
         </div>
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
           {/* <img src="/path-to-your-image.jpg" alt="Hero Image" className="w-full lg:w-3/4 h-auto" /> */}
-          <WaitingForm></WaitingForm>
+          <BookingForm></BookingForm>
         </div>
       </div>
 
