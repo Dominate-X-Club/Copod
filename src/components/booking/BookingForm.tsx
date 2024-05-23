@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -16,14 +18,14 @@ export default function BookingForm() {
                     <Label>Name</Label>
                     <Input placeholder="Abhinav Singhal" className=""></Input>
                     <Label>Phone</Label>
-                    <Input placeholder="+91 8882021243" className=""></Input
+                    <Input placeholder="+91 8882021243" className=""></Input>
                     <Label>Email</Label>
                     <Input placeholder="contact@umun.in" className=""></Input>
                     <Label>City</Label>
                     <Input placeholder="Delhi 🇮🇳" className=""></Input>
 
-<Label>Recording Date</Label> <br/>
-                    <DatePickerDemo className="w-full"></DatePickerDemo>
+                    <Label>Recording Date</Label> <br/>
+                    <DatePickerDemo></DatePickerDemo>
                 </form>
             </CardContent>
             <CardFooter className="flex justify-between">
