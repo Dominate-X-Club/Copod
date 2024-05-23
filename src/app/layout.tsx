@@ -4,7 +4,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const url = process.env.DEPLOYMENT_URL;
+const url = process.env.DEPLOYMENT_URL;
 
 export const metadata: Metadata = {
   title: "Copod: Managed Podcast Studios in Delhi NCR",
