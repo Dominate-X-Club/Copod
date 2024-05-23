@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import DatePickerDemo from "../ui/date-picker";
 
-export default function WaitingForm() {
+export default function BookingForm() {
     return (
         <Card className="w-svw mx-20">
             <CardHeader>
@@ -16,7 +16,7 @@ export default function WaitingForm() {
                     <Label>Name</Label>
                     <Input placeholder="Abhinav Singhal" className=""></Input>
                     <Label>Phone</Label>
-                    <Input placeholder="+91 8882021243" className=""></Input>
+                    <Input placeholder="+91 8882021243" className=""></Input
                     <Label>Email</Label>
                     <Input placeholder="contact@umun.in" className=""></Input>
                     <Label>City</Label>
