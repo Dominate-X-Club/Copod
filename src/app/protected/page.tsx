@@ -1,20 +1,24 @@
-import { redirect } from 'next/navigation';
+"use client";
+import isAuth from '@/components/isAuth/isAuth';
+import { getUser } from '@/utils/supabase/getUser'
+import React, { useEffect, useState } from 'react'
 
-import { createClient } from '@/utils/supabase/server';
+const page = () => {
 
-/*  This is a protected page that requires the user to be logged in
-    if the user is not logged in, they will be redirected to the login page
-    this is done by checking if the user is logged in using the supabase client
-    it can be used to implement protected routes in your application like dashboard, settings, etc 
-*/
+  const [user, setUser] = useState<any>();
 
-export default async function ProtectedPage() {
-  const supabase = createClient();
 
-  const { data, error } = await supabase.auth.getUser();
-  if (error || !data?.user) {
-    redirect('/login');
+  const fetchUser = async () => {
+    const user = await getUser();
+    setUser(user)
   }
+  useEffect(() => {
+    fetchUser();
+  }, [])
 
-  return <p>Hello {data.user.email}</p>;
+  return (
+    <div>hello {user?.email}</div>
+  )
 }
+
+export default isAuth(page);
