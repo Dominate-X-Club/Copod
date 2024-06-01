@@ -31,10 +31,13 @@ const LoginForm: FC<FormProps> = ({}) => {
   const onSubmit = async(data: authFormInputs) => {
     setIsLoading(true);
     const res=await login(data.email,data.password)
-    toast({
-      variant:"destructive",
-      title:res.message,
-    })
+    if(res)
+      {
+        toast({
+          variant:"destructive",
+          title:res.message,
+        })
+      }
     setIsLoading(false);
   };
 
