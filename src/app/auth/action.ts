@@ -18,6 +18,7 @@ export async function login(email:string,password:string) {
   const { data,error } = await supabase.auth.signInWithPassword(loginData);
 
 
+  
   if (error) {
     console.log(error)
     const errObj={
@@ -44,7 +45,12 @@ export async function signup(email:string,password:string) {
   const { error } = await supabase.auth.signUp(signUpData);
 
   if (error) {
-    return error
+    console.log(error)
+    const errObj={
+      code:error.code,
+      message:error.message
+    }
+    return errObj
   }
 
   revalidatePath('/', 'layout');

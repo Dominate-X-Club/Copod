@@ -36,13 +36,12 @@ const SignUpForm: FC<SignUpFormProps> = ({}) => {
     // Handle form submission
     const res=await signup(data.email,data.password);
     if(res)
-    {
-      toast({
-        variant: "destructive",
-        title: "Something Went Wrong",
-        description: "There was a problem Signing up. Try again or refresh the page",
-      })
-    }
+      {
+        toast({
+          variant:"destructive",
+          title:res.message,
+        })
+      }
     setIsLoading(false);
   };
 
