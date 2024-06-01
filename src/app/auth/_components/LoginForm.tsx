@@ -3,15 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Github } from "lucide-react";
 import Link from "next/link";
 import { FC, useState } from "react";
-import PrivacyPolicy from "./PrivacyPolicy";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {authFormInputs} from "@/types/types"
 import { authZodSchema } from "../zod";
-import { login } from "../action";
+import { login, loginWithGoogle, loginWithSportify } from "../action";
 import { useToast } from "@/components/ui/use-toast"
 import { FaGoogle,FaSpotify } from "react-icons/fa";
 import Spinner from "@/components/Spinner";
@@ -33,14 +31,10 @@ const LoginForm: FC<FormProps> = ({}) => {
   const onSubmit = async(data: authFormInputs) => {
     setIsLoading(true);
     const res=await login(data.email,data.password)
-    if(res)
-      {
-        toast({
-          title: "Something Went Wrong",
-          description: "There was a problem Signing up. Try again or refresh the page",
-          variant: "destructive",
-        })
-      }
+    toast({
+      variant:"destructive",
+      title:res.message,
+    })
     setIsLoading(false);
   };
 
@@ -117,11 +111,11 @@ const LoginForm: FC<FormProps> = ({}) => {
                 </div>
               </div>
               <div className="w-full flex flex-col gap-2">
-                <Button variant="noShadow" type="button" disabled={isLoading} className="dark:bg-gray-700 dark:text-white">
+                <Button onClick={loginWithGoogle} variant="noShadow" type="button" disabled={isLoading} className="dark:bg-gray-700 dark:text-white">
                   {isLoading ? <Spinner/> : <FaGoogle className="w-4 h-4 mx-2" />}{" "}
                   Continue with Google
                 </Button>
-                <Button variant="noShadow" type="button" disabled={isLoading} className="dark:bg-gray-700 dark:text-white">
+                <Button onClick={loginWithSportify} variant="noShadow" type="button" disabled={isLoading} className="dark:bg-gray-700 dark:text-white">
                   {isLoading ? <Spinner/> : <FaSpotify className="w-4 h-4 mx-2" />}{" "}
                   Continue with Spotify
                 </Button>
@@ -135,7 +129,23 @@ const LoginForm: FC<FormProps> = ({}) => {
               </p>
             </div>
           </div>
-          <PrivacyPolicy />
+          <p className="px-8 text-center text-sm text-muted-foreground dark:text-gray-400">
+        By clicking continue, you agree to our{" "}
+        <Link
+          href="/terms"
+          className="underline underline-offset-4 hover:text-primary dark:hover:text-primary-light"
+        >
+          Terms of Service
+        </Link>{" "}
+        and{" "}
+        <Link
+          href="/privacy"
+          className="underline underline-offset-4 hover:text-primary dark:hover:text-primary-light"
+        >
+          Privacy Policy
+        </Link>
+        .
+      </p>
         </div>
       </div>
     </div>

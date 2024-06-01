@@ -19,7 +19,12 @@ export async function login(email:string,password:string) {
 
 
   if (error) {
-    return error
+    console.log(error)
+    const errObj={
+      code:error.code,
+      message:error.message
+    }
+    return errObj
   }
 
   revalidatePath('/', 'layout');
@@ -44,4 +49,38 @@ export async function signup(email:string,password:string) {
 
   revalidatePath('/', 'layout');
   redirect('/auth/emailverification');
+}
+
+// Sportify 
+export async function loginWithSportify() {
+  const supabase = createClient();
+
+  const { data,error } = await supabase.auth.signInWithOAuth({
+    provider:"spotify"
+  });
+
+
+  if (error) {
+    return error
+  }
+
+  revalidatePath('/', 'layout');
+  redirect('/');
+}
+
+// Sportify 
+export async function loginWithGoogle() {
+  const supabase = createClient();
+
+  const { data,error } = await supabase.auth.signInWithOAuth({
+    provider:"google"
+  });
+
+
+  if (error) {
+    return error
+  }
+
+  revalidatePath('/', 'layout');
+  redirect('/');
 }
