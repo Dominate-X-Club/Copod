@@ -43,6 +43,8 @@ export default function Auth() {
       }
       else {
         setMessage('Successful, please check your email for instructions.');
+        setEmail("");
+        setPassword("");
       }
 
     } catch (error: any) {
@@ -65,6 +67,8 @@ export default function Auth() {
         setMessage(error.message);
       }
       else {
+        setEmail("");
+        setPassword("");
         router.push("/");
       }
     } catch (error: any) {
