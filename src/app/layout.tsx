@@ -18,6 +18,10 @@ export const metadata: Metadata = {
        siteName: "Copod",
        images: [{
          url: `${url}/meta/copod_meta_shot.webp`,
+         secureUrl: `${url}/meta/copod_meta_shot.webp`,
+         width: 1200,
+         height: 627,
+         alt: 'Podcast like billionares. Invite friends and start talking. It\'s that easy with copod\'s managed podcast studios in Delhi NCR.'
        }],
      }
 };
