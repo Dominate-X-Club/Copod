@@ -124,7 +124,7 @@ const LoginForm: FC<FormProps> = ({}) => {
                 </Button>
               </div>
               <p className="text-center dark:text-gray-400">
-                Don't have an account?{" "}
+                Don&apos;t have an account?{" "}
                 <Link href="/auth/sign-up" className="underline dark:text-white">
                   Sign Up
                 </Link>{" "}
