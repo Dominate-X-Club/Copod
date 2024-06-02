@@ -6,7 +6,7 @@ const EmailVerification = () => {
           Verify Your Email Address
         </h1>
         <p className="text-gray-500 dark:text-gray-400">
-          We've sent a verification email to your inbox. Please check your email
+          We&apos;ve sent a verification email to your inbox. Please check your email
           and click the link to complete the verification process.
         </p>
       </div>
