@@ -8,7 +8,7 @@ import DatePickerDemo from "../ui/date-picker";
 
 export default function BookingForm() {
     return (
-        <Card className="w-svw mx-20">
+        <Card className="w-svw mx-20" id="bookingform">
             <CardHeader>
                 <CardTitle className="text-4xl">Shoot your Podcast</CardTitle>
                 <CardDescription className="text-xl">with <b>copod</b> anyone can record a Podcast.<br/>Just invite your guests, and start talking.<br/>It&apos;s that easy!</CardDescription>

@@ -97,7 +97,7 @@ export default function NavBar() {
         
         <Button className="mx-10 lg:size-lg sm:size-sm" 
          >
-          Book Now!
+         <a href="#bookingform"> Book Now!</a>
         </Button>
       </div>
     </header>
