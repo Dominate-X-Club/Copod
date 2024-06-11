@@ -8,7 +8,8 @@ import DatePickerDemo from "../ui/date-picker";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-
+import {bookingFormInputs} from "@/types/types"
+import { submitBookingForm } from "@/app/actions/BookingForm";
 const bookingFormSchema = z.object({
   name: z.string().min(1,"Name is required"),
   phone: z.string().regex(/^\+?\d{10,15}$/, "Invalid phone number"),
@@ -26,14 +27,15 @@ export default function BookingForm() {
     setValue,
     watch,
     formState: { errors },
-  } = useForm({
+  } = useForm<bookingFormInputs>({
     resolver: zodResolver(bookingFormSchema),
   });
 
   const recordingDate = watch("recordingDate");
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = (data:bookingFormInputs) => {
+    console.log(data)
+      submitBookingForm(data)
   };
 
   return (
@@ -86,7 +88,7 @@ export default function BookingForm() {
           <Label>Recording Date</Label>
           <DatePickerDemo
               date={recordingDate}
-              setDate={(date) => setValue("recordingDate", date)}
+              setDate={(date:Date) => setValue("recordingDate", date)}
             />
           {errors.recordingDate && <p className="text-red-500">{errors.recordingDate.message}</p>}
         </div>
