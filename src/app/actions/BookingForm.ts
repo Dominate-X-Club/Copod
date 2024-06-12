@@ -26,10 +26,16 @@ export const submitBookingForm=async(formData:bookingFormInputs)=>{
         }) as ReactElement,
       });
     
+      let returnObj={
+        success:true,
+        message:"Form Submitted Sucessfully"
+      }
+
       if (error) {
         console.log(error)
-        return error;
+        returnObj.success=false;
+        returnObj.message=error.message;
       }
     
-      return (data);
+      return returnObj;
 }

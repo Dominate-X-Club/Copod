@@ -10,6 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import {bookingFormInputs} from "@/types/types"
 import { submitBookingForm } from "@/app/actions/BookingForm";
+import { toast } from "../ui/use-toast";
 const bookingFormSchema = z.object({
   name: z.string().min(1,"Name is required"),
   phone: z.string().regex(/^\+?\d{10,15}$/, "Invalid phone number"),
@@ -33,9 +34,20 @@ export default function BookingForm() {
 
   const recordingDate = watch("recordingDate");
 
-  const onSubmit = (data:bookingFormInputs) => {
-    console.log(data)
-      submitBookingForm(data)
+  const onSubmit = async(data:bookingFormInputs) => {
+    const res=await submitBookingForm(data)
+    if(!res.success)
+      {
+        toast({
+          variant:"destructive",
+          title:res.message
+        })
+        return;
+      }
+    toast({
+      variant:"default",
+      title:res.message
+    })
   };
 
   return (
