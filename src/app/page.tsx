@@ -9,6 +9,7 @@ export default function Home() {
     <main style={{
       // backgroundImage: `url('/background/white-grid.jpg')`,
       backgroundRepeat: 'round',
+      height:'auto'
     }}
       className="h-[100vh] bg-black">
       <NavBar></NavBar>
@@ -16,7 +17,7 @@ export default function Home() {
         <div className="w-full h-full align-middle lg:w-1/2 ">
           <HeroFirst></HeroFirst>
         </div>
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+        <div className="w-full my-5 lg:w-1/2 flex justify-center lg:justify-end">
           {/* <img src="/path-to-your-image.jpg" alt="Hero Image" className="w-full lg:w-3/4 h-auto" /> */}
           <BookingForm></BookingForm>
         </div>
