@@ -3,9 +3,8 @@
 import { Button } from "@/components/ui/button"
 import { NavigationMenu, NavigationMenuList } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Label } from "@radix-ui/react-label"
-
 import { JSX, SVGProps } from "react"
+import Logo from "@/components/ui/logo"
 
 export default function NavBar() {
 
@@ -47,10 +46,8 @@ export default function NavBar() {
           </Button>
         </SheetTrigger>
         <SheetContent className="bg-white" side="left">
-          <div className="flex items-center justify-between gap-2 px-4 py-4 lg:hidden">
-            <img src="/logo/logo-white-bg-150-80.png"></img>
-
-          </div>
+         <Logo className ="flex border-x-0 h-[76px] justify-center 
+        text-4xl lg:px-16 sm:px-5 px-6 text-white border-r-[1px] border-main " />
           <div className="grid gap-4 py-6">
             {links.map((key, index) => (
               <Button className="justify-start w-full text-left px-4"
@@ -61,21 +58,10 @@ export default function NavBar() {
         </SheetContent>
       </Sheet>
 
-      <div className="flex w-full bg-black">
-        <Label className="flex border-x-0 h-[76px] justify-center 
-        text-4xl lg:px-16 sm:px-5 px-6 text-white border-r-[1px] border-main border-dashed"
-          style={{
+      <Logo className ="flex border-x-0 h-[76px] justify-center 
+        text-4xl lg:px-16 sm:px-5 px-6 text-white border-r-[1px] border-main border-dashed" />
+          <div className="grid gap-4 py-6"/>
 
-            fontWeight: "650",
-            letterSpacing: "-3.5px",
-            // textShadow: "-2px 2px 0 white",
-            textShadow: "2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 5px 4px 0 ",
-            fontFamily: "poppins",
-            justifyContent: "center",
-            display: "flex",
-            flexDirection: "column"
-          }}>copod</Label>
-      </div>
       <div className="flex-1 hidden lg:flex justify-end">
         <NavigationMenu>
           <NavigationMenuList>
