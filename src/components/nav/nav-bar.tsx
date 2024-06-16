@@ -49,7 +49,12 @@ export default function NavBar() {
         </SheetTrigger>
         <SheetContent className="bg-white" side="left">
           <div className="flex items-center justify-between gap-2 px-4 py-4 lg:hidden">
-            <Image src="/logo/logo-white-bg-150-80.png" alt="brand" />
+            <Image
+              src="/logo/logo-white-bg-150-80.png"
+              alt="brand"
+              width={2}
+              height={2}
+            />
           </div>
           <div className="grid gap-4 py-6">
             {links.map((key, index) => (
