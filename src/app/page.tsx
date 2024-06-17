@@ -1,5 +1,4 @@
 
-
 import HeroFirst from "@/components/hero-section/hero-first";
 import NavBar from "@/components/nav/nav-bar";
 import BookingForm from "@/components/booking/BookingForm";
@@ -10,7 +9,7 @@ export default function Home() {
       // backgroundImage: `url('/background/white-grid.jpg')`,
       backgroundRepeat: 'round',
     }}
-      className="h-[100vh] bg-black">
+      className="h-full bg-black">
       <NavBar></NavBar>
       <div className="container mx-auto h-full flex flex-col lg:flex-row items-center justify-between">
         <div className="w-full h-full align-middle lg:w-1/2 ">
@@ -21,7 +20,6 @@ export default function Home() {
           <BookingForm></BookingForm>
         </div>
       </div>
-
 
     </main>
   );

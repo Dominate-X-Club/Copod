@@ -19,6 +19,7 @@ package-lock.json
 .env
 
 .env.*
+.env.local
 
 # misc
 .DS_Store
