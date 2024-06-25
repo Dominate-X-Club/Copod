@@ -34,14 +34,7 @@ const Pricing = () => {
               <X className="mr-2" />
               Ideal for individuals starting out.
             </p>
-            {/* <p className="mb-6 flex items-center justify-center">
-              <Check className="mr-2" />
-              Ideal for individuals starting out.
-            </p>
-            <p className="mb-6 flex items-center justify-center">
-              <X className="mr-2" />
-              Ideal for individuals starting out.
-            </p> */}
+
             <Button className="bg-black text-main border-white w-full shadow-base-black duration-300">
               Get Started <ArrowRight className="ml-2" />
             </Button>
@@ -77,14 +70,7 @@ const Pricing = () => {
               <X className="mr-2" />
               Ideal for individuals starting out.
             </p>
-            {/* <p className="mb-6 flex items-center justify-center">
-              <Check className="mr-2" />
-              Ideal for individuals starting out.
-            </p>
-            <p className="mb-6 flex items-center justify-center">
-              <X className="mr-2" />
-              Ideal for individuals starting out.
-            </p> */}
+
             <Button className="bg-black text-main border-white w-full shadow-base-black duration-300">
               Get Started <ArrowRight className="ml-2" />
             </Button>
@@ -117,14 +103,7 @@ const Pricing = () => {
               <Check className="mr-2" />
               Ideal for individuals starting out.
             </p>
-            {/* <p className="mb-6 flex items-center justify-center">
-              <Check className="mr-2" />
-              Ideal for individuals starting out.
-            </p>
-            <p className="mb-6 flex items-center justify-center">
-              <Check className="mr-2" />
-              Ideal for individuals starting out.
-            </p> */}
+
             <Button className="bg-black text-main border-white w-full shadow-base-black duration-300">
               Get Started <ArrowRight className="ml-2" />
             </Button>
